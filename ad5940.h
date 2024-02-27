@@ -4932,6 +4932,38 @@ uint32_t  AD5940_MCUResourceInit(void *pCfg);
 */
 
 
+#define PROJECT_JUUL
+#ifdef PROJECT_JUUL
+
+/* HSOSCCON/HPOSCCON Register Bit Position and Mask */
+#define BITP_AFE_HPOSCCON_OSCSTARTSEL           0
+#define BITP_AFE_HPOSCCON_CLKOUTCON             1
+#define BITP_AFE_HPOSCCON_FASTLOCKEN            3
+#define BITP_AFE_HPOSCCON_LOCK                  4
+#define BITP_AFE_HPOSCCON_CHOPDIS               5
+#define BITP_AFE_HPOSCCON_CHOPCLKSEL            6
+
+#define BITM_AFE_HPOSCCON_OSCSTARTSEL           (1L<<0)
+#define BITM_AFE_HPOSCCON_CLKOUTCON             (1L<<1)
+#define BITM_AFE_HPOSCCON_FASTLOCKEN            (1L<<3)
+#define BITM_AFE_HPOSCCON_LOCK                  (1L<<4)
+#define BITM_AFE_HPOSCCON_CHOPDIS               (1L<<5)
+#define BITM_AFE_HPOSCCON_CHOPCLKSEL            (1L<<6)
+
+/* HSDACCON Register Bit Position */
+#define BITP_AFE_HSDACCON_BW250KEN              11              /*  PGA Stage Gain Attenuation */
+#define BITM_AFE_HSDACCON_BW250KEN              (1L<<11)        /*  PGA Stage Gain Attenuation */
+
+/* ADCCON Register Bit Position and Mask */
+#define BITP_AFE_ADCCON_AAFFMDE                 20
+
+#define AAFFMDE_50KHZ                           0
+#define AAFFMDE_100KHZ                          1
+#define AAFFMDE_250KHZ                          2
+
+#endif
+
+
 /**
   * @} AD5940_Library
   */
