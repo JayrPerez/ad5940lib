@@ -4950,11 +4950,17 @@ uint32_t  AD5940_MCUResourceInit(void *pCfg);
 #define BITM_AFE_HPOSCCON_CHOPDIS               (1L<<5)
 #define BITM_AFE_HPOSCCON_CHOPCLKSEL            (1L<<6)
 
+/* ADCFILTERCON Register Bit Position */
+#define BITP_AFE_ADCFILTERCON_SINC2CLKENB       16
+#define BITP_AFE_ADCFILTERCON_DACWAVECLKENB     17
+#define BITP_AFE_ADCFILTERCON_DFTCLKENB         18
+
 /* HSDACCON Register Bit Position */
 #define BITP_AFE_HSDACCON_BW250KEN              11              /*  PGA Stage Gain Attenuation */
 #define BITM_AFE_HSDACCON_BW250KEN              (1L<<11)        /*  PGA Stage Gain Attenuation */
 
 /* ADCCON Register Bit Position and Mask */
+#define BITP_AFE_ADCCON_AAFFMDE                 20
 #define BITP_AFE_ADCCON_AAFFMDE                 20
 
 #define AAFFMDE_50KHZ                           0
